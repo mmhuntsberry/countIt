@@ -21,30 +21,13 @@ const getPrompt = () =>  {
   });
 }
 
-// Tests
-
 if (typeof describe === 'function') {
-  // describe('#mastermind()', () => {
-  //   it('should register a guess and generate hints', () => {
-  //     mastermind('aabb');
-  //     assert.equal(board.length, 1);
-  //   });
-  //   it('should be able to detect a win', () => {
-  //     assert.equal(mastermind(solution), 'You guessed it!');
-  //   });
-  // });
-
-  // describe('#generateHint()', () => {
-  //   it('should generate hints', () => {
-  //     assert.equal(generateHint('abdc'), '2-2');
-  //   });
-  //   it('should generate hints if solution has duplicates', () => {
-  //     assert.equal(generateHint('aabb'), '1-1');
-    // });
-
-  // });
-
+  describe('#countIt()', () => {
+    it('should be of type function', () => {
+      
+      assert.equal(typeof countIt, "function");
+    });
+  });
 } else {
-
   getPrompt();
 }
