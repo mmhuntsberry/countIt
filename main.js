@@ -8,10 +8,21 @@ const rl = readline.createInterface({
 });
 
 
+// write code to Ramp-Numbers here
+const numOfRampsBelow = (num) => {
+  // your code goes here
+// turn num to string?
+let numToString = num.toString();
+for (let i = 0; i <= numToString.length; i++){
 
-const countIt = (str) => {
-  console.log('BOOMS', str.length)
 }
+
+}
+
+
+
+
+
 
 
 const getPrompt = () =>  {
@@ -21,13 +32,13 @@ const getPrompt = () =>  {
   });
 }
 
-if (typeof describe === 'function') {
-  describe('#countIt()', () => {
-    it('should be of type function', () => {
+// if (typeof describe === 'function') {
+//   describe('#countIt()', () => {
+//     it('should be of type function', () => {
       
-      assert.equal(typeof countIt, "function");
-    });
-  });
-} else {
-  getPrompt();
-}
+//       assert.equal(typeof countIt, "function");
+//     });
+//   });
+// } else {
+//   getPrompt();
+// }
