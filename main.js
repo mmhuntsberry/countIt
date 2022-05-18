@@ -44,6 +44,8 @@ const numOfRampsBelow = (nums) => {
   }
 
 }
+// `There are ${number} total ramp numbers less than ${input}`
+
 
 let input = '';
 const textInput = document.getElementById("numInput");
@@ -61,6 +63,7 @@ button.addEventListener('click', (e) => {
   let number = numOfRampsBelow(input)
   textOutPut.innerText = number
   console.log(numOfRampsBelow(input))
+  console.log(`There are ${number} total ramp numbers less than ${input}`)
 })
 
 
