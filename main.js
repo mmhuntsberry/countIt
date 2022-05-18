@@ -61,7 +61,8 @@ textInput.addEventListener('keyup', (event) => {
 button.addEventListener('click', (e) => {
   e.preventDefault()
   let number = numOfRampsBelow(input)
-  textOutPut.innerText = number
+  textOutPut.innerText = `There are ${number} total ramp numbers less than ${input}!!`
+
   console.log(numOfRampsBelow(input))
   console.log(`There are ${number} total ramp numbers less than ${input}`)
 })
