@@ -11,41 +11,31 @@
 // write code to Ramp-Numbers here
 const numOfRampsBelow = (nums) => {
   // your code goes here
-// turn num to string?
-// let numToString = num.toString();
-// for (let i = 0; i <= numToString.length; i++) {
-
-// }const rampNumbers = (nums) => {
-  let numsArr = String(nums).split("");
-  for (let i = 0; i < numsArr.length - 1; i++) {
-    if (numsArr[i] < numsArr[i + 1]) {
-      // console.log(numsArr[i], numsArr[i + 1]);
-      // console.log(true);
-    } else {
-      return console.log("not a ramp number");
-    }
-  }
-
+  const numsArr = String(nums).split("");
   let counter = 0;
-  let rampNums = [];
-
-  while (counter < nums) {
-    counter++;
-    let counterArr = String(counter).split("");
-    for (let i = 0; i < counterArr.length - 1; i++) {
-      if (counterArr[i] <= counterArr[i + 1] || counterArr.length === 1) {
-        console.log(counter);
-        // console.log(numsArr[i], numsArr[i + 1]);
-        console.log(true);
-      }
+  for (let i = 1; i <= nums; i++) {
+    let splitIndex = String(i).split("");
+    console.log(splitIndex);
+    if (splitIndex.length === 1) {
+      counter++;
+      console.log(true, "1");
+    } else if (
+      splitIndex[0] <= splitIndex[1] &&
+      splitIndex[1] <= splitIndex[2] 
+    ) {
+      counter++;
+      console.log(true, "2");
+    } else if (splitIndex.length > 2) {
+      console.log(false)
+    } else if (splitIndex[0] <= splitIndex[1]) {
+      counter++;
+      console.log(true, "3");
+    } else {
+      console.log(false);
     }
-    rampNums.push(counter);
-    console.log(rampNums.length);
   }
-
+  return counter;
 }
-// `There are ${number} total ramp numbers less than ${input}`
-
 
 let input = '';
 const textInput = document.getElementById("numInput");
